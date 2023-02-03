@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:interview_text/contant_box/all_task.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -157,81 +158,100 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: SingleChildScrollView(
                     scrollDirection: Axis.vertical,
                     child: Row(
-                      children: [
-                        const SizedBox(
+                      children: const [
+                        SizedBox(
                           width: 15,
                         ),
-                        Container(
-                          height: 100,
-                          width: 100,
-                          color: Colors.red,
+                        ReminderTaskContant(
+                          pic: '',
+                          text: '',
+                          title: '',
                         ),
-                        const SizedBox(
+                        SizedBox(
                           width: 15,
                         ),
-                        Container(
-                          height: 100,
-                          width: 100,
-                          color: Colors.red,
+                        ReminderTaskContant(
+                          pic: '',
+                          text: '',
+                          title: '',
                         ),
-                        const SizedBox(
+                        SizedBox(
                           width: 15,
                         ),
-                        Container(
-                          height: 100,
-                          width: 100,
-                          color: Colors.red,
+                        ReminderTaskContant(
+                          pic: '',
+                          text: '',
+                          title: '',
                         ),
-                        const SizedBox(
+                        SizedBox(
                           width: 15,
                         ),
-                        Container(
-                          height: 100,
-                          width: 100,
-                          color: Colors.red,
+                        ReminderTaskContant(
+                          pic: '',
+                          text: '',
+                          title: '',
                         ),
-                        const SizedBox(
+                        SizedBox(
                           width: 15,
                         ),
-                        Container(
-                          height: 100,
-                          width: 100,
-                          color: Colors.red,
+                        ReminderTaskContant(
+                          pic: '',
+                          text: '',
+                          title: '',
                         ),
-                        const SizedBox(
+                        SizedBox(
                           width: 15,
                         ),
-                        Container(
-                          height: 100,
-                          width: 100,
-                          color: Colors.red,
+                        ReminderTaskContant(
+                          pic: '',
+                          text: '',
+                          title: '',
                         ),
-                        const SizedBox(
+                        SizedBox(
                           width: 15,
                         ),
                       ],
                     ),
                   )),
             ]),
-            SizedBox(
+            const SizedBox(
               height: 100,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text("All Tasks"),
-                TextButton(onPressed: () {}, child: Text("See All"))
-              ],
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text("All Tasks"),
+                  TextButton(onPressed: () {}, child: const Text("See All"))
+                ],
+              ),
             ),
             Expanded(
               child: SingleChildScrollView(
                 scrollDirection: Axis.vertical,
                 child: Column(
                   children: const [
-                    TaskContent(),
-                    TaskContent(),
-                    TaskContent(),
-                    TaskContent(),
+                    TaskContent(
+                      pic: '',
+                      text: 'Online Class Routine',
+                      title: 'Save Date: 10/12/2022',
+                    ),
+                    TaskContent(
+                      pic: '',
+                      text: 'Online Class Routine',
+                      title: 'Save Date: 10/12/2022',
+                    ),
+                    TaskContent(
+                      pic: '',
+                      text: 'Online Class Routine',
+                      title: 'Save Date: 10/12/2022',
+                    ),
+                    TaskContent(
+                      pic: '',
+                      text: 'Online Class Routine',
+                      title: 'Save Date: 10/12/2022',
+                    ),
                   ],
                 ),
               ),
@@ -273,31 +293,26 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class TaskContent extends StatelessWidget {
-  const TaskContent({
+class ReminderTaskContant extends StatelessWidget {
+  const ReminderTaskContant({
     Key? key,
+    required this.pic,
+    required this.title,
+    required this.text,
   }) : super(key: key);
+  final String pic;
+  final String title;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 15, right: 15, top: 5, bottom: 5),
-      child: Card(
-        child: Container(
-          height: 100,
-          width: double.infinity,
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
-          child: Row(
-            children: [
-              Image.asset(''),
-              Column(
-                children: const [
-                  Text('Online Class Routine'),
-                  Text('Save Date: 10/12/22')
-                ],
-              )
-            ],
-          ),
+    return Card(
+      child: Container(
+        height: 100,
+        width: 150,
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
+        child: Column(
+          children: [Image.asset(pic), Text(title), Text(text)],
         ),
       ),
     );
