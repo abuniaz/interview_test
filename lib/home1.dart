@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:interview_text/container_two/container_two.dart';
 import 'package:interview_text/contant_box/all_task.dart';
+import 'package:interview_text/reminder_task/reminder_home.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -50,15 +52,16 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Stack(clipBehavior: Clip.none, children: [
               Container(
-                height: 300,
+                height: 360,
                 width: double.infinity,
                 decoration: const BoxDecoration(
-                    color: Colors.teal,
+                    color: Color.fromARGB(255, 21, 63, 57),
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(25),
                         bottomRight: Radius.circular(25))),
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.only(
+                      top: 20, bottom: 8, left: 10, right: 10),
                   child: Column(
                     children: [
                       Row(
@@ -76,7 +79,15 @@ class _MyHomePageState extends State<MyHomePage> {
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white),
                                 ),
-                                Text("Let's explore your notes")
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  "Let's explore your notes",
+                                  style: TextStyle(
+                                      color: Color.fromARGB(255, 170, 170, 170),
+                                      fontSize: 12),
+                                )
                               ],
                             ),
                           ),
@@ -90,64 +101,36 @@ class _MyHomePageState extends State<MyHomePage> {
                                   image: AssetImage("images/pic.jpg"),
                                   fit: BoxFit.cover),
                             ),
-                            // child: Image.asset(
-                            //   "images/pic.jpg",
-                            //   fit: BoxFit.cover,
-                            // ),
                           )
                         ],
                       ),
-                      Container(
-                        height: 150,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                            color: Colors.black54,
-                            borderRadius: BorderRadius.circular(20)),
-                        child: Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              const Text("Welcome to TickTick Task"),
-                              const Text(
-                                  'your one-stop for task management. Simplify, \ntrack, and accomplish task eith ease.'),
-                              Row(
-                                children: [
-                                  TextButton(
-                                    onPressed: () {},
-                                    child: Container(
-                                      height: 35,
-                                      width: 120,
-                                      decoration: BoxDecoration(
-                                          color: Colors.teal,
-                                          borderRadius:
-                                              BorderRadius.circular(30),
-                                          border: Border.all(
-                                              width: 2, color: Colors.white)),
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceEvenly,
-                                        children: const [
-                                          Icon(Icons.play_arrow),
-                                          Text('Watch Video')
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      const FirstContainer(),
+                      const SizedBox(
+                        height: 30,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Text("Reminder Task"),
+                          const Text(
+                            "Reminder Task",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
                           TextButton(
-                              onPressed: () {}, child: const Text("See All"))
+                              onPressed: () {},
+                              child: const Text(
+                                "See All",
+                                style: TextStyle(
+                                    color: Color.fromARGB(255, 199, 199, 199)),
+                              ))
                         ],
+                      ),
+                      const SizedBox(
+                        height: 30,
                       ),
                     ],
                   ),
@@ -163,49 +146,49 @@ class _MyHomePageState extends State<MyHomePage> {
                           width: 15,
                         ),
                         ReminderTaskContant(
-                          pic: '',
-                          text: '',
-                          title: '',
+                          pic: 'images/note2.jpg',
+                          text: 'Save Date: 10/12/2022',
+                          title: 'Online Class Routine',
                         ),
                         SizedBox(
                           width: 15,
                         ),
                         ReminderTaskContant(
-                          pic: '',
-                          text: '',
-                          title: '',
+                          pic: 'images/note.png',
+                          text: 'Save Date: 15/12/2022',
+                          title: 'Office Work List',
                         ),
                         SizedBox(
                           width: 15,
                         ),
                         ReminderTaskContant(
-                          pic: '',
-                          text: '',
-                          title: '',
+                          pic: 'images/note2.jpg',
+                          text: 'Save Date: 10/12/2022',
+                          title: 'Online Class Routine',
                         ),
                         SizedBox(
                           width: 15,
                         ),
                         ReminderTaskContant(
-                          pic: '',
-                          text: '',
-                          title: '',
+                          pic: 'images/note2.jpg',
+                          text: 'Save Date: 15/12/2022',
+                          title: 'Office Work List',
                         ),
                         SizedBox(
                           width: 15,
                         ),
                         ReminderTaskContant(
-                          pic: '',
-                          text: '',
-                          title: '',
+                          pic: 'images/note2.jpg',
+                          text: 'Save Date: 10/12/2022',
+                          title: 'Online Class Routine',
                         ),
                         SizedBox(
                           width: 15,
                         ),
                         ReminderTaskContant(
-                          pic: '',
-                          text: '',
-                          title: '',
+                          pic: 'images/note.png',
+                          text: 'Save Date: 15/12/2022',
+                          title: 'Office Work List',
                         ),
                         SizedBox(
                           width: 15,
@@ -215,14 +198,18 @@ class _MyHomePageState extends State<MyHomePage> {
                   )),
             ]),
             const SizedBox(
-              height: 100,
+              height: 60,
             ),
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text("All Tasks"),
+                  const Text(
+                    "All Tasks",
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  ),
                   TextButton(onPressed: () {}, child: const Text("See All"))
                 ],
               ),
@@ -233,24 +220,24 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Column(
                   children: const [
                     TaskContent(
-                      pic: '',
-                      text: 'Online Class Routine',
-                      title: 'Save Date: 10/12/2022',
+                      pic: 'images/note.png',
+                      text: 'Save Date: 10/12/2022',
+                      title: 'Online Class Routine',
                     ),
                     TaskContent(
-                      pic: '',
-                      text: 'Online Class Routine',
-                      title: 'Save Date: 10/12/2022',
+                      pic: 'images/note.png',
+                      text: 'Save Date: 10/12/2022',
+                      title: 'Online Class Routine',
                     ),
                     TaskContent(
-                      pic: '',
-                      text: 'Online Class Routine',
-                      title: 'Save Date: 10/12/2022',
+                      pic: 'images/note.png',
+                      text: 'Save Date: 10/12/2022',
+                      title: 'Online Class Routine',
                     ),
                     TaskContent(
-                      pic: '',
-                      text: 'Online Class Routine',
-                      title: 'Save Date: 10/12/2022',
+                      pic: 'images/note.png',
+                      title: 'Online Class Routine',
+                      text: 'Save Date: 15/12/2022',
                     ),
                   ],
                 ),
@@ -288,32 +275,6 @@ class _MyHomePageState extends State<MyHomePage> {
         selectedItemColor: Colors.teal,
         unselectedItemColor: Colors.black12,
         onTap: _onItemTapped,
-      ),
-    );
-  }
-}
-
-class ReminderTaskContant extends StatelessWidget {
-  const ReminderTaskContant({
-    Key? key,
-    required this.pic,
-    required this.title,
-    required this.text,
-  }) : super(key: key);
-  final String pic;
-  final String title;
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      child: Container(
-        height: 100,
-        width: 150,
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
-        child: Column(
-          children: [Image.asset(pic), Text(title), Text(text)],
-        ),
       ),
     );
   }
