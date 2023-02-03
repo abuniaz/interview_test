@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:interview_text/container_two/container_two.dart';
 import 'package:interview_text/contant_box/all_task.dart';
+import 'package:interview_text/first_intruduce/introduce.dart';
 import 'package:interview_text/reminder_task/reminder_home.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -64,46 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       top: 20, bottom: 8, left: 10, right: 10),
                   child: Column(
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            // color: Colors.white70,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                Text(
-                                  'Hi, Habib👋',
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Text(
-                                  "Let's explore your notes",
-                                  style: TextStyle(
-                                      color: Color.fromARGB(255, 170, 170, 170),
-                                      fontSize: 12),
-                                )
-                              ],
-                            ),
-                          ),
-                          Container(
-                            height: 40,
-                            width: 40,
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.white,
-                              image: DecorationImage(
-                                  image: AssetImage("images/pic.jpg"),
-                                  fit: BoxFit.cover),
-                            ),
-                          )
-                        ],
-                      ),
+                      const Introduce(),
                       const SizedBox(
                         height: 30,
                       ),

@@ -16,7 +16,7 @@ class FirstContainer extends StatelessWidget {
           border: Border.all(
               width: 0.5, color: Color.fromARGB(255, 143, 140, 140))),
       child: Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: const EdgeInsets.only(top: 15, left: 15, bottom: 8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -34,9 +34,10 @@ class FirstContainer extends StatelessWidget {
                   color: Color.fromARGB(255, 170, 170, 170), fontSize: 12),
             ),
             const SizedBox(
-              height: 25,
+              height: 16,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 TextButton(
                   onPressed: () {},
@@ -62,6 +63,14 @@ class FirstContainer extends StatelessWidget {
                     ),
                   ),
                 ),
+                Transform.rotate(
+                  angle: 180 / 4,
+                  child: Image.asset(
+                    'images/todo.jpg',
+                    height: 50,
+                    width: 80,
+                  ),
+                )
               ],
             )
           ],
