@@ -16,8 +16,8 @@ class ReminderTaskContant extends StatelessWidget {
     return Card(
       elevation: 3,
       child: Container(
-        height: 100,
-        width: 150,
+        height: 105,
+        width: 170,
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
         child: Padding(
           padding: const EdgeInsets.all(8.0),

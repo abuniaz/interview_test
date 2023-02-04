@@ -71,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       const FirstContainer(),
                       const SizedBox(
-                        height: 30,
+                        height: 15,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -99,8 +99,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               Positioned(
-                  bottom: -50,
-                  child: SingleChildScrollView(
+                bottom: -50,
+                child: SingleChildScrollView(
                     scrollDirection: Axis.vertical,
                     child: Row(
                       children: const [
@@ -156,8 +156,8 @@ class _MyHomePageState extends State<MyHomePage> {
                           width: 15,
                         ),
                       ],
-                    ),
-                  )),
+                    )),
+              ),
             ]),
             const SizedBox(
               height: 60,
