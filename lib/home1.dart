@@ -99,9 +99,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               Positioned(
-                bottom: -50,
+                bottom: -53,
+                top: 297,
+                left: 0,
+                right: 0,
                 child: SingleChildScrollView(
-                    scrollDirection: Axis.vertical,
+                    scrollDirection: Axis.horizontal,
                     child: Row(
                       children: const [
                         SizedBox(
